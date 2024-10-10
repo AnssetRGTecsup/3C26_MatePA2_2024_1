@@ -26,11 +26,14 @@ public class PieceController : MonoBehaviour
     public void Select()
     {
         outlineMaterial.SetFloat("_Scale", _scaleSelected); //NO MODIFICAR
+        cubeTransform.position -= new Vector3(0, 0, 0.90f);
+
     }
 
     public void Unselect()
     {
         outlineMaterial.SetFloat("_Scale", _scaleUnselected); //NO MODIFICAR
+        cubeTransform.position += new Vector3(0, 0, 0.90f);
     }
 
     //NO MODIFICAR
