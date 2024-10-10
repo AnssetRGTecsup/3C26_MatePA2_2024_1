@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 78917595}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 113334186}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 500011689}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 730882449}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 880394694}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 897124747}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 941802585}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 965287282}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -1871,38 +1871,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cb4aea0f-4b42-410b-9b5e-59641f56e0bc
     m_ActionName: Gameplay/RotateRight[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1045109633}
-        m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
-        m_MethodName: OnSelectPressed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c76ca191-d8c3-498c-a740-7c3effc304e3
-    m_ActionName: Gameplay/Select[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1045109633}
-        m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
-        m_MethodName: OnCancelPressed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 69a5934a-1485-45c1-9718-82ceaad53479
-    m_ActionName: Gameplay/Cancel[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Gameplay
@@ -2113,7 +2081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 1236390989}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:

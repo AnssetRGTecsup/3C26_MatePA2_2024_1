@@ -35,16 +35,12 @@ public class PieceController : MonoBehaviour
     //NO MODIFICAR
     public void RotateLeft()
     {
-        //cubeTransform.Rotate(Vector3.forward, 90); //Puede probar rotar con este método para verificar la rotación (Descomente esta línea de código)
-
         StartCoroutine(RotatePiece(90f));
     }
 
     //NO MODIFICAR
     public void RotateRight()
     {
-        //cubeTransform.Rotate(Vector3.forward, -90); //Puede probar rotar con este método para verificar la rotación (Descomente esta línea de código)
-
         StartCoroutine(RotatePiece(-90f));
     }
 
@@ -52,11 +48,10 @@ public class PieceController : MonoBehaviour
     {
         OnStartAnimation?.Invoke(); //NO MODIFICAR
 
-        float startAngle = 0f;
+        float startAngle = cubeTransform.eulerAngles.z;
         float currentNextAngle = 0f;
 
-        float startPosition = 0f;
-        float targetPosition = 0f;
+        float targetPosition = cubeTransform.eulerAngles.z + rotation;
 
         StartCoroutine(TranslateAnimation(0f, 0f));
 
@@ -71,10 +66,11 @@ public class PieceController : MonoBehaviour
             time += Time.deltaTime * 5f; //NO MODIFICAR
 
             currentAngle = Mathf.Lerp(startAngle, currentNextAngle, time); //NO MODIFICAR
+            cubeTransform.rotation = Quaternion.Euler(0, 0, currentAngle);
 
             yield return null; //NO MODIFICAR
         }
-
+        cubeTransform.rotation = Quaternion.Euler(0, 0, targetPosition);
         StartCoroutine(TranslateAnimation(0f, 0f));
 
         yield return new WaitForSeconds(0.1f); //NO MODIFICAR
