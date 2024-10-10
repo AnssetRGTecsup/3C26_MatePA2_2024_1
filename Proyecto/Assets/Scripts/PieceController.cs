@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -52,20 +53,17 @@ public class PieceController : MonoBehaviour
     {
         OnStartAnimation?.Invoke(); //NO MODIFICAR
 
-        Quaternion startRotation = cubeTransform.rotation; // Rotación inicial
-        Quaternion targetRotation = startRotation * Quaternion.Euler(0, 0, rotation);
-
-        float startAngle = 0f;
-        float currentNextAngle = 0f;
+        float startAngle = cubeTransform.eulerAngles.z;
+        float currentNextAngle = startAngle + rotation;
 
         float startPosition = 0f;
         float targetPosition = 0f;
 
-        StartCoroutine(TranslateAnimation(0f, 0f));
+        StartCoroutine(TranslateAnimation(startAngle, targetPosition));
 
         yield return new WaitForSeconds(0.1f); //NO MODIFICAR
 
-        float currentAngle = 0f; ;
+        float currentAngle = startAngle; ;
 
         float time = 0;
 
@@ -74,15 +72,13 @@ public class PieceController : MonoBehaviour
             time += Time.deltaTime * 5f; //NO MODIFICAR
 
             currentAngle = Mathf.Lerp(startAngle, currentNextAngle, time); //NO MODIFICAR
-
+            cubeTransform.eulerAngles = new Vector3(cubeTransform.eulerAngles.x, cubeTransform.eulerAngles.y, currentAngle);
             yield return null; //NO MODIFICAR
         }
 
-        StartCoroutine(TranslateAnimation(0f, 0f));
+        StartCoroutine(TranslateAnimation(startPosition, targetPosition));
 
         yield return new WaitForSeconds(0.1f); //NO MODIFICAR
-
-        cubeTransform.rotation = targetRotation;
 
         OnFinishAnimation?.Invoke(); //NO MODIFICAR
     }
