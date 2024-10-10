@@ -52,6 +52,9 @@ public class PieceController : MonoBehaviour
     {
         OnStartAnimation?.Invoke(); //NO MODIFICAR
 
+        Quaternion startRotation = cubeTransform.rotation; // Rotación inicial
+        Quaternion targetRotation = startRotation * Quaternion.Euler(0, 0, rotation);
+
         float startAngle = 0f;
         float currentNextAngle = 0f;
 
@@ -78,6 +81,8 @@ public class PieceController : MonoBehaviour
         StartCoroutine(TranslateAnimation(0f, 0f));
 
         yield return new WaitForSeconds(0.1f); //NO MODIFICAR
+
+        cubeTransform.rotation = targetRotation;
 
         OnFinishAnimation?.Invoke(); //NO MODIFICAR
     }
