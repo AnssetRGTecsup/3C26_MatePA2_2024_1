@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SimpleController : MonoBehaviour
 {
     [SerializeField] private PieceController[] cubes; //NO MODIFICAR
@@ -19,12 +20,16 @@ public class SimpleController : MonoBehaviour
     {
         cubes[_currentPosition].Select();
     }
-
     public void PressUp()
     {
         if (!_canAct) return; //NO MODIFICAR
 
         cubes[_currentPosition].Unselect(); //NO MODIFICAR
+
+        if (_currentPosition - 3 >= 0)
+        {
+            _currentPosition -= 3;
+        }
 
         cubes[_currentPosition].Select(); //NO MODIFICAR
     }
@@ -35,6 +40,11 @@ public class SimpleController : MonoBehaviour
 
         cubes[_currentPosition].Unselect(); //NO MODIFICAR
 
+        if (_currentPosition + 3 < cubes.Length)
+        {
+            _currentPosition += 3;
+        }
+
         cubes[_currentPosition].Select(); //NO MODIFICAR
     }
 
@@ -44,6 +54,11 @@ public class SimpleController : MonoBehaviour
 
         cubes[_currentPosition].Unselect(); //NO MODIFICAR
 
+        if (_currentPosition % 3 != 0)
+        {
+            _currentPosition -= 1;
+        }
+
         cubes[_currentPosition].Select(); //NO MODIFICAR
     }
 
@@ -52,6 +67,11 @@ public class SimpleController : MonoBehaviour
         if (!_canAct) return; //NO MODIFICAR
 
         cubes[_currentPosition].Unselect(); //NO MODIFICAR
+
+        if (_currentPosition % 3 != 2)
+        {
+            _currentPosition += 1;
+        }
 
         cubes[_currentPosition].Select(); //NO MODIFICAR
     }
