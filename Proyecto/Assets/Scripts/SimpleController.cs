@@ -23,7 +23,13 @@ public class SimpleController : MonoBehaviour
     public void PressUp()
     {
         if (!_canAct) return; //NO MODIFICAR
-
+        ///
+        int newPosition = _currentPosition - 3; 
+        if (newPosition >= 0)
+        {
+            _currentPosition = newPosition; 
+        }
+        ///
         cubes[_currentPosition].Unselect(); //NO MODIFICAR
 
         cubes[_currentPosition].Select(); //NO MODIFICAR
@@ -32,7 +38,13 @@ public class SimpleController : MonoBehaviour
     public void PressDown()
     {
         if (!_canAct) return; //NO MODIFICAR
-
+        ///
+        int newPosition = _currentPosition + 3; 
+        if (newPosition < cubes.Length) 
+        {
+            _currentPosition = newPosition; 
+        }
+        ///
         cubes[_currentPosition].Unselect(); //NO MODIFICAR
 
         cubes[_currentPosition].Select(); //NO MODIFICAR
@@ -41,7 +53,12 @@ public class SimpleController : MonoBehaviour
     public void PressLeft()
     {
         if (!_canAct) return; //NO MODIFICAR
-
+        ///
+        if (_currentPosition % 3 != 0) 
+        {
+            _currentPosition -= 1; 
+        }
+        ///
         cubes[_currentPosition].Unselect(); //NO MODIFICAR
 
         cubes[_currentPosition].Select(); //NO MODIFICAR
@@ -50,7 +67,12 @@ public class SimpleController : MonoBehaviour
     public void PressRight()
     {
         if (!_canAct) return; //NO MODIFICAR
-
+        ///
+        if (_currentPosition % 3 != 2) 
+        {
+            _currentPosition += 1; 
+        }
+        ///
         cubes[_currentPosition].Unselect(); //NO MODIFICAR
 
         cubes[_currentPosition].Select(); //NO MODIFICAR
