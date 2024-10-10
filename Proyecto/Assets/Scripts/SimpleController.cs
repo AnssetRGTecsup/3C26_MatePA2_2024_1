@@ -19,6 +19,7 @@ public class SimpleController : MonoBehaviour
     private void Start()
     {
         cubes[_currentPosition].Select();
+        Debug.Log("Posición actual: " + _currentPosition);
     }
     public void PressUp()
     {

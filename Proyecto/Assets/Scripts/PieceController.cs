@@ -35,7 +35,7 @@ public class PieceController : MonoBehaviour
     //NO MODIFICAR
     public void RotateLeft()
     {
-        cubeTransform.Rotate(Vector3.forward, 90); //Puede probar rotar con este método para verificar la rotación (Descomente esta línea de código)
+        cubeTransform.Rotate(Vector3.forward, -90); //Puede probar rotar con este método para verificar la rotación (Descomente esta línea de código)
 
         StartCoroutine(RotatePiece(90f));
     }
@@ -43,7 +43,7 @@ public class PieceController : MonoBehaviour
     //NO MODIFICAR
     public void RotateRight()
     {
-        cubeTransform.Rotate(Vector3.forward, -90); //Puede probar rotar con este método para verificar la rotación (Descomente esta línea de código)
+        cubeTransform.Rotate(Vector3.forward, 90); //Puede probar rotar con este método para verificar la rotación (Descomente esta línea de código)
 
         StartCoroutine(RotatePiece(-90f));
     }
@@ -52,11 +52,8 @@ public class PieceController : MonoBehaviour
     {
         OnStartAnimation?.Invoke(); //NO MODIFICAR
 
-        float startAngle = 0f;
-        float currentNextAngle = 0f;
-
-        float startPosition = 0f;
-        float targetPosition = 0f;
+        float startAngle = cubeTransform.eulerAngles.z;
+        float currentNextAngle = startAngle + rotation;
 
         StartCoroutine(TranslateAnimation(0f, 0f));
 

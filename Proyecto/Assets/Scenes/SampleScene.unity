@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 78917595}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 113334186}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 500011689}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 730882449}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 941802585}
+  cubeTransform: {fileID: 880394694}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 897124747}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 941802585}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 965287282}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
@@ -2081,7 +2081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93507addbcaabb49849107e6d82281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeTransform: {fileID: 0}
+  cubeTransform: {fileID: 1236390989}
   OnStartAnimation:
     m_PersistentCalls:
       m_Calls:
