@@ -15,6 +15,7 @@ public class InputHandler : MonoBehaviour
 
     public void OnUpPressed(InputAction.CallbackContext context)
     {
+
         if (context.performed)
         {
             UpPress?.Invoke();

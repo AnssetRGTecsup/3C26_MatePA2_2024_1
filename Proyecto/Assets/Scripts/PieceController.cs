@@ -32,12 +32,20 @@ public class PieceController : MonoBehaviour
         outlineMaterial.SetFloat("_Scale", _scaleUnselected); //NO MODIFICAR
     }
 
+    private void ClampRotation()
+    {
+        Vector3 rotation = cubeTransform.eulerAngles;
+        rotation.z = Mathf.Round(rotation.z / 90) * 90;
+        cubeTransform.eulerAngles = rotation;
+    }
+
     //NO MODIFICAR
     public void RotateLeft()
     {
         //cubeTransform.Rotate(Vector3.forward, 90); //Puede probar rotar con este método para verificar la rotación (Descomente esta línea de código)
 
         StartCoroutine(RotatePiece(90f));
+        ClampRotation();
     }
 
     //NO MODIFICAR
@@ -46,6 +54,7 @@ public class PieceController : MonoBehaviour
         //cubeTransform.Rotate(Vector3.forward, -90); //Puede probar rotar con este método para verificar la rotación (Descomente esta línea de código)
 
         StartCoroutine(RotatePiece(-90f));
+        ClampRotation();
     }
 
     IEnumerator RotatePiece(float rotation)
