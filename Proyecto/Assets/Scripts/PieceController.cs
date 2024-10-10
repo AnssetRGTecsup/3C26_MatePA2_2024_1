@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class PieceController : MonoBehaviour
 {
@@ -15,12 +16,14 @@ public class PieceController : MonoBehaviour
     public UnityEvent OnStartAnimation; //NO MODIFICAR
     public UnityEvent OnFinishAnimation; //NO MODIFICAR
 
+
     private void Awake()
     {
         outlineMaterial = GetComponent<MeshRenderer>().materials[1]; //NO MODIFICAR
         cubeTransform = this.gameObject.GetComponent<Transform>();
         Unselect(); //NO MODIFICAR
     }
+
 
     public void Select()
     {
@@ -51,8 +54,9 @@ public class PieceController : MonoBehaviour
     IEnumerator RotatePiece(float rotation)
     {
         OnStartAnimation?.Invoke(); //NO MODIFICAR
+        rotation = Random.Range(0, 360);
 
-        float startAngle = 0f;
+        float startAngle = rotation;
         float currentNextAngle = 0f;
 
         float startPosition = 0f;
@@ -75,7 +79,7 @@ public class PieceController : MonoBehaviour
             yield return null; //NO MODIFICAR
         }
 
-        StartCoroutine(TranslateAnimation(0f, 0f));
+        StartCoroutine(TranslateAnimation(startPosition, targetPosition));
 
         yield return new WaitForSeconds(0.1f); //NO MODIFICAR
 
