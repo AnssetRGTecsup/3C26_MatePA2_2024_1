@@ -18,7 +18,7 @@ public class PieceController : MonoBehaviour
     private void Awake()
     {
         outlineMaterial = GetComponent<MeshRenderer>().materials[1]; //NO MODIFICAR
-
+        cubeTransform = this.gameObject.GetComponent<Transform>();
         Unselect(); //NO MODIFICAR
     }
 
