@@ -72,7 +72,7 @@ public class SimpleController : MonoBehaviour
         {
             _currentPosition += 1; 
         }
-        ///
+        ////
         cubes[_currentPosition].Unselect(); //NO MODIFICAR
 
         cubes[_currentPosition].Select(); //NO MODIFICAR
