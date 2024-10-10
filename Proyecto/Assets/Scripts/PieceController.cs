@@ -21,7 +21,13 @@ public class PieceController : MonoBehaviour
 
         Unselect(); //NO MODIFICAR
     }
-
+    private void Start()
+    {
+        if (cubeTransform == null)
+        {
+            cubeTransform = this.gameObject.transform;
+        }
+    }
     public void Select()
     {
         outlineMaterial.SetFloat("_Scale", _scaleSelected); //NO MODIFICAR
@@ -52,8 +58,8 @@ public class PieceController : MonoBehaviour
     {
         OnStartAnimation?.Invoke(); //NO MODIFICAR
 
-        float startAngle = 0f;
-        float currentNextAngle = 0f;
+        float startAngle = cubeTransform.transform.rotation.z;
+        float currentNextAngle = startAngle+rotation;
 
         float startPosition = 0f;
         float targetPosition = 0f;
@@ -71,7 +77,7 @@ public class PieceController : MonoBehaviour
             time += Time.deltaTime * 5f; //NO MODIFICAR
 
             currentAngle = Mathf.Lerp(startAngle, currentNextAngle, time); //NO MODIFICAR
-
+            cubeTransform.rotation = Quaternion.Euler(0f, 0f, currentAngle);
             yield return null; //NO MODIFICAR
         }
 
