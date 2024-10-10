@@ -23,37 +23,53 @@ public class SimpleController : MonoBehaviour
     public void PressUp()
     {
         if (!_canAct) return; //NO MODIFICAR
-
-        cubes[_currentPosition].Unselect(); //NO MODIFICAR
-
-        cubes[_currentPosition].Select(); //NO MODIFICAR
+        print("Arriba");
+        if (_currentPosition - 3 >= 0)
+        {
+            cubes[_currentPosition].Unselect(); //NO MODIFICAR
+            _currentPosition -= 3;
+            cubes[_currentPosition].Select(); //NO MODIFICAR
+        }
+        print(_currentPosition);
     }
 
     public void PressDown()
     {
         if (!_canAct) return; //NO MODIFICAR
-
-        cubes[_currentPosition].Unselect(); //NO MODIFICAR
-
-        cubes[_currentPosition].Select(); //NO MODIFICAR
+        print("Abajo");
+        if (_currentPosition + 3 < cubes.Length)
+        {
+            cubes[_currentPosition].Unselect(); //NO MODIFICAR
+            _currentPosition += 3; 
+            cubes[_currentPosition].Select(); //NO MODIFICAR
+        }
+        print(_currentPosition);
     }
 
     public void PressLeft()
     {
         if (!_canAct) return; //NO MODIFICAR
-
-        cubes[_currentPosition].Unselect(); //NO MODIFICAR
-
-        cubes[_currentPosition].Select(); //NO MODIFICAR
+        print("izquierda");
+        if (_currentPosition % 3 != 0)
+        {
+            cubes[_currentPosition].Unselect(); //NO MODIFICAR
+            _currentPosition -= 1; 
+            cubes[_currentPosition].Select(); //NO MODIFICAR
+        }
+        print(_currentPosition);
     }
 
     public void PressRight()
     {
         if (!_canAct) return; //NO MODIFICAR
-
-        cubes[_currentPosition].Unselect(); //NO MODIFICAR
-
-        cubes[_currentPosition].Select(); //NO MODIFICAR
+        print("Derecha");
+        if (_currentPosition % 3 != 2)
+        {
+            cubes[_currentPosition].Unselect(); //NO MODIFICAR
+            _currentPosition += 1; 
+            cubes[_currentPosition].Select(); //NO MODIFICAR
+        }
+        print(_currentPosition);
     }
 
     //NO MODIFICAR
